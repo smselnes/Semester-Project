@@ -5,4 +5,17 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+}
+.div1 {
+  background-color: burlywood;
+}
+.div2 {
+  background-color: deepskyblue;
+}
+.div3 {
+  background-color: mediumturquoise;
+}
+p {
+  margin: 0px;
 }
