@@ -8,24 +8,72 @@
       name="description"
       content="Welcome to the new science museum in Horten. We're here to inspire youngsters to dive into scientific projects."
     />
+    <script
+      src="https://kit.fontawesome.com/982175d43a.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles/style.css" />
     <title>Community Science Museum | Homepage</title>
   </head>
   <body>
-    <a href="index.html"
-      ><img
-        src="/images/logo.jpg"
-        alt="Brand logo. Illustration of a sun inside an atom."
-    /></a>
-    <h1>Community Science Museum - Website under construction</h1>
-    <div class="div1"><p>Lorem ipsum dolor sit amet.</p></div>
-    <div class="div2">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-    <div class="div3">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nihil.
-      </p>
-    </div>
+    <header>
+      <a href="index.html"
+        ><img
+          src="/images/logo.jpg"
+          alt="Brand logo. Illustration of a uppercase letter c sorrounded by atoms."
+      /></a>
+      <label for="hamburger"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger" />
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="getinvolved.html">Get Involved</a></li>
+          <li class="search">
+            <a href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="welcome">
+        <img
+          src="/images/home-1.jpg"
+          alt="Image of an lookalike human heart displayed in a scientific environment."
+        />
+        <div class="welcome-text">
+          <h1>Community Science Museum</h1>
+          <p>
+            Come join us at the Community Science Museum where we’re committed
+            to making science accessible to all.
+          </p>
+          <p>
+            The aim of our museum is to create a space where everyone can
+            experience the wonders of our discoveries and perhaps even ignite a
+            lifelong passion to continue the exploration of the world around us.
+          </p>
+        </div>
+        <button><a href="explore.html">Explore</a></button>
+      </section>
+      <section class="welcome2">
+        <img
+          src="/images/home-3.jpg"
+          alt="Image of a scientist looking in a microscope."
+        />
+        <img src="/images/home-2.jpg" alt="Image of a enlarged ant model." />
+        <img
+          src="/images/home5.jpg"
+          alt="Illustration of the main planets in our solar system."
+        />
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Copyright 2021. All rights reserved</p>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </footer>
   </body>
 </html>

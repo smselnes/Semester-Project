@@ -2,20 +2,406 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   src: url();
 }
+a,
+h1,
+h2,
+h3 {
+  font-family: Georgia, Courier New, "Times New Roman", Times, serif;
+}
+/* =========== VARIABLES ===========*/
+:root {
+  --dark: #29637d;
+  --peach: #f4c18e;
+  --green: #baceb3;
+  --light: #fbf8e9;
+  --orange: #fa9a39;
+  --blue: #99e1ff;
+}
 
+/* =========== GLOBAL STYLING ===========*/
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
+  text-align: center;
+  font-size: 62.5%;
 }
-.div1 {
-  background-color: burlywood;
+a {
+  text-decoration: none;
 }
-.div2 {
-  background-color: deepskyblue;
+h1 {
+  text-align: center;
 }
-.div3 {
-  background-color: mediumturquoise;
+.active {
+  background-color: var(--orange);
 }
-p {
+.active a {
+  color: var(--dark);
+  font-weight: bold;
+}
+.active a:hover {
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+h1 {
+  font-size: 3rem;
   margin: 0px;
+  padding: 10px;
+  background-color: var(--peach);
+}
+h2 {
+  font-size: 2.1rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+.welcome button:hover,
+.explore-text button:hover,
+.explore-spaces button:hover {
+  background-color: var(--green);
+}
+.student button:hover,
+.subscribe button:hover,
+.contact button:hover {
+  background-color: var(--light);
+}
+/* =========== HEADER AND NAVIGATION ===========*/
+header {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+}
+nav li {
+  display: inline-block;
+  color: white;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+nav a {
+  color: white;
+}
+nav a:hover,
+footer a:hover {
+  color: var(--peach);
+}
+nav {
+  align-self: center;
+  margin-right: 10%;
+}
+
+/* =========== Hamburger menu ===========*/
+#hamburger {
+  display: none;
+}
+#hamburger:checked ~ nav {
+  display: block;
+}
+header label {
+  display: none;
+  color: var(--light);
+  font-size: 3rem;
+  margin-right: 10%;
+  align-self: center;
+}
+/* =========== HOME PAGE ===========*/
+.welcome {
+  background-color: var(--peach);
+  display: flex;
+  justify-content: space-evenly;
+}
+.welcome img {
+  margin: 15px 0px;
+  width: 25%;
+}
+.welcome p {
+  font-size: 1rem;
+}
+.welcome-text {
+  width: 40%;
+}
+
+.welcome button {
+  background-color: var(--orange);
+  border-radius: 5px;
+  flex: 0.4;
+  height: 4rem;
+  align-self: center;
+}
+
+.welcome a {
+  font-weight: bold;
+  font-size: 2.1rem;
+  color: var(--dark);
+}
+
+.welcome2 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.welcome2 img {
+  margin: 15px 5px;
+  box-shadow: 2px 2px 5px black;
+  width: 32%;
+}
+/*=========== EXPLORE PAGE - Section one ===========*/
+.explore-one,
+.explore-two,
+.explore-three {
+  background-color: var(--blue);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.explore-intro {
+  background-color: var(--light);
+}
+
+.explore-intro {
+  margin: auto;
+  width: 40%;
+}
+.explore-text {
+  max-width: 20%;
+  align-self: center;
+}
+
+.explore-text,
+.explore-intro,
+.about-main p,
+.welcome2 p,
+.involved p,
+.explore-spaces div {
+  font-size: 1rem;
+}
+.explore-one img,
+.explore-two img,
+.explore-three img {
+  padding: 30px;
+}
+.explore-two {
+  background-color: var(--peach);
+}
+.explore-three {
+  background-color: var(--blue);
+  padding-bottom: 20px;
+}
+.explore-one button,
+.explore-two button,
+.explore-three button,
+.explore-spaces button {
+  background-color: var(--orange);
+  width: 95%;
+  height: 3rem;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.explore-spaces {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+
+.explore-spaces img {
+  width: 80%;
+}
+.explore-spaces div,
+.about-main div {
+  background-color: var(--green);
+  box-shadow: 2px 2px 3px black;
+}
+.explore-spaces p,
+.about-main p {
+  padding: 0% 8%;
+  text-align: left;
+}
+.explore-spaces button {
+  width: 60%;
+  justify-self: center;
+  align-self: center;
+}
+/*=========== Events & News page ===========*/
+.event-main,
+.news-main {
+  display: grid;
+  background-color: var(--light);
+}
+.event-main,
+.news-main p,
+.student p {
+  font-size: 1rem;
+}
+.event-main section,
+.news-main section,
+.student {
+  display: flex;
+  margin: 10px 0px;
+  justify-content: center;
+}
+.event-one,
+.news-one,
+.student {
+  background-color: var(--green);
+}
+.event-two,
+.news-two,
+.involved div {
+  background-color: var(--peach);
+}
+.event-main img,
+.news-main img,
+.student img {
+  border-radius: 40%;
+  margin: 20px 20px;
+  padding: 20px;
+}
+.event-text {
+  flex-direction: column;
+  width: 38%;
+  text-align: left;
+}
+/*=========== About Page ===========*/
+.about-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  background-color: var(--light);
+}
+.about-main div {
+  margin: 10px;
+}
+.location {
+  background-image: url(../images/about-map.png);
+  background-size: cover;
+  grid-column: 3/5;
+}
+.location h2 {
+  position: relative;
+}
+
+/*=========== Get Involved page ===========*/
+.student button {
+  background-color: var(--orange);
+  width: 45%;
+  font-size: 1.1rem;
+  height: 2.5rem;
+  box-shadow: 1px 1px 3px black;
+  margin: 3%;
+}
+.involved {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.involved div {
+  border: 1px solid black;
+  margin: 2%;
+}
+.involved p {
+  margin: 5%;
+}
+
+.contact {
+  background-color: var(--dark);
+  padding: 25px;
+  color: var(--light);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.contact-heading h3 {
+  color: var(--light);
+  background-color: var(--dark);
+  margin: 0px;
+}
+.radio {
+  display: inline-grid;
+  font-size: 0.8rem;
+  text-align: start;
+  margin-left: 10%;
+}
+.radio-choice:hover {
+  border: 1px solid var(--light);
+}
+.contact-input {
+  display: grid;
+  margin: 5px;
+}
+.contact-input input,
+.subscribe input {
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+.contact-input input:hover,
+.subscribe input:hover,
+.textarea:hover {
+  border: 3px solid black;
+}
+textarea {
+  border-radius: 10px;
+}
+.subscribe {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  background-color: var(--peach);
+  padding: 10px;
+  justify-content: center;
+}
+.subscribe input {
+  background-color: var(--light);
+  margin: 15px 1%;
+}
+.subscribe button,
+.contact button {
+  background-color: var(--green);
+  padding: 10px;
+  margin: 0px 10px;
+  align-self: center;
+  width: 35%;
+}
+
+/*=========== FOOTER ===========*/
+footer {
+  background-color: var(--light);
+  font-size: 1.2rem;
+  border-top: 1px solid var(--dark);
+  margin-top: 15px;
+}
+footer p {
+  padding: 5px;
+  margin: 0px;
+}
+footer a {
+  padding: 8px;
+}
+
+/*===========MEDIA QUERIES==========*/
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  header label {
+    display: block;
+  }
+  #hamburger {
+    display: none;
+  }
+  nav li {
+    display: block;
+  }
+}
+@media (max-width: 1090px) {
+  nav a {
+    font-size: 1.1rem;
+  }
+  nav ul {
+    padding: 0px;
+  }
+  nav {
+    margin-right: 0%;
+  }
 }
