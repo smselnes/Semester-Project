@@ -97,7 +97,7 @@ nav {
   display: none;
 }
 #hamburger:checked ~ nav {
-  display: block;
+  display: contents;
 }
 header label {
   display: none;
@@ -223,7 +223,6 @@ header label {
 .explore-spaces button {
   width: 60%;
   justify-self: center;
-  align-self: center;
 }
 /*=========== Events & News page ===========*/
 .event-main,
@@ -380,6 +379,7 @@ footer a {
 }
 
 /*===========MEDIA QUERIES==========*/
+
 @media (max-width: 800px) {
   nav {
     display: none;
@@ -390,9 +390,25 @@ footer a {
   #hamburger {
     display: none;
   }
+  header a {
+    color: var(--light);
+  }
   nav li {
     display: block;
+    background-color: var(--dark);
+    padding: 20px;
   }
+  nav ul {
+    position: fixed;
+    margin: 10px;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    
+  }
+}
+@keyframes dropdown {
+  from 
 }
 @media (max-width: 1090px) {
   nav a {
