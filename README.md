@@ -20,3 +20,6 @@ Semester project using and showing skills we've developed throughout the first s
             life itself.
           </p>
 12.05: Finishing layout of page 3 and 4 (events and news). Implementing the hamburger menu on all pages. Making sure its positioned correctly on smaller devices. Testing the page on my mobile and my kids tablet to see where to improve the pages (not worked on the media queries yet though).
+13.05: Day off due to closed kindergarden
+14.05: Day off due to closed kindergarden. Practice on search-transition in the evening. 
+15.05:
