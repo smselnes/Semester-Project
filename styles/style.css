@@ -31,7 +31,10 @@ body {
 a {
   text-decoration: none;
 }
-
+input,
+textarea {
+  background-color: var(--light);
+}
 .active {
   background-color: var(--orange);
 }
@@ -44,7 +47,7 @@ a {
   color: var(--dark);
 }
 h1 {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   margin: 0px;
   padding: 10px;
   background-color: var(--peach);
@@ -52,10 +55,12 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.1rem;
+  margin: 0;
 }
 h3 {
   font-size: 1.5rem;
+  margin: 0;
 }
 .fas {
   font-size: 2rem;
@@ -79,7 +84,7 @@ header {
 nav li {
   display: inline-block;
   color: white;
-  padding: 15px;
+  padding: 13px;
   font-size: 1.5rem;
 }
 nav a {
@@ -97,8 +102,8 @@ nav {
   padding: 10px 10px 10px 65px;
   background-color: var(--light);
   color: var(--dark);
-  transition: 1s;
-  border-radius: 10px;
+  transition-duration: 1s;
+  transform: rotateX(150deg);
 }
 
 /* =========== Hamburger menu ===========*/
@@ -114,6 +119,11 @@ header label {
   font-size: 3rem;
   margin-right: 10%;
   align-self: center;
+  cursor: pointer;
+}
+header label:hover {
+  transition-duration: 1s;
+  transform: rotateZ(360deg);
 }
 /* =========== HOME PAGE ===========*/
 .welcome {
@@ -132,9 +142,8 @@ header label {
 }
 .welcome button {
   background-color: var(--orange);
-  border-radius: 5px;
   margin: 10px 0px;
-  height: 3rem;
+  height: 5rem;
 }
 .welcome a {
   font-weight: bold;
@@ -157,85 +166,60 @@ header label {
 }
 /*=========== EXPLORE PAGE===========*/
 .explore-one,
-.explore-two,
 .explore-three {
   background-color: var(--blue);
   display: flex;
+  flex-direction: column-reverse;
   text-align: center;
+  justify-content: center;
+}
+.explore-two {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .explore-intro {
-  margin: auto;
-  width: 40%;
   background-color: var(--light);
-}
-.explore-text {
-  max-width: 20%;
-  align-self: center;
+  margin-top: 2%;
 }
 
-.explore-text,
-.explore-intro,
-.about-main p,
-.involved p,
-.explore-spaces div,
-.student button {
-  font-size: 1rem;
-}
 .explore-one img,
 .explore-two img,
 .explore-three img {
-  padding: 30px;
+  margin: 30px;
+  box-shadow: 2px 2px 5px black;
 }
 
-.explore-three {
-  background-color: var(--blue);
-  padding-bottom: 20px;
-}
 .explore-one button,
 .explore-two button,
 .explore-three button,
 .explore-spaces button {
   background-color: var(--orange);
-  width: 95%;
-  height: 3rem;
+  width: 200px;
+  height: 5rem;
   box-shadow: 1px 1px 3px black;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 2%;
 }
-.explore-spaces {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+.explore-spaces button {
+  justify-self: center;
+  align-self: center;
 }
-
 .explore-spaces img {
   width: 80%;
+  box-shadow: 2px 2px 5px black;
 }
 .explore-spaces div,
 .about-main div {
   background-color: var(--green);
-  box-shadow: 2px 2px 3px black;
 }
-.explore-spaces p,
-.about-main p {
-  padding: 0% 3% 2%;
-  text-align: center;
-}
-.explore-spaces button {
-  width: 60%;
-  justify-self: center;
-}
+
 /*=========== Events & News page ===========*/
 
-.event-main,
-.news-main p,
-.student p,
-.welcome p,
-.event-text,
-.involved p,
-.radio {
+.radio,
+p {
   font-size: 0.8rem;
 }
 
@@ -259,26 +243,24 @@ header label {
   text-align: center;
 }
 /*=========== About Page ===========*/
-.about-main {
+.about-main,
+.explore-spaces {
   background-color: var(--light);
 }
-.about-subheading {
-  font-size: 1rem;
-  background-color: var(--dark);
-  color: var(--light);
-  margin: 0;
+.subheading {
+  background-image: url(../images/textures.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 2%;
+}
+.subheading h2 {
+  background-color: var(--light);
+  padding: 1%;
 }
 span {
   font-size: 1.3rem;
 }
-.about-main div {
-  margin: 10px 10px 10px;
-}
-.about-main h3,
-.involved h3 {
-  margin: 0;
-}
+
 .location img {
   width: 95%;
 }
@@ -291,22 +273,19 @@ span {
   box-shadow: 1px 1px 3px black;
   margin: 3%;
 }
-.involved div {
+.involved div,
+.about-main div,
+.explore-spaces div {
   border: 1px solid black;
-  margin: 1% 0%;
+  margin: 1% 1%;
 }
-.involved p {
+p {
   padding: 2%;
 }
 .contact {
   background-color: var(--dark);
   color: var(--light);
   padding: 3%;
-  /* 
-  padding: 25px;
-  
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); */
 }
 .contact-heading h3 {
   font-size: 1.1rem;
@@ -318,27 +297,35 @@ span {
 .radio {
   display: inline-grid;
   text-align: start;
-  /* margin-left: 10%; */
 }
 .radio-choice:hover {
   border: 1px solid var(--light);
 }
+.radio div {
+  margin: 10px;
+}
+input[type="radio"] {
+  transform: scale(1.5);
+}
 .contact-input {
   display: grid;
-  margin: 5px;
+  margin: 2%;
 }
-
 .contact-input input,
 .subscribe input {
   margin: 5px 0px;
-  border-radius: 10px;
+  height: 2rem;
 }
 .contact-input input:hover,
 .subscribe input:hover,
 .textarea:hover {
   border: 3px solid black;
 }
-textarea {
+textarea,
+.welcome button,
+.search:focus,
+.contact-input input,
+.subscribe input {
   border-radius: 10px;
 }
 .subscribe {
@@ -346,26 +333,18 @@ textarea {
   grid-template-rows: 2fr 1fr 1fr;
   background-color: var(--peach);
   padding-bottom: 2%;
-
-  /* display: grid;
-  grid-template-columns: 25% 25% 25%;
-  padding: 10px;
-  justify-content: center;
-   */
 }
 .subscribe input {
   background-color: var(--light);
-  width: 80%;
+  width: 275px;
 }
 .subscribe button,
 .contact button,
 .subscribe input {
   justify-self: center;
-
-  /* padding: 10px;
-  margin: 0px 10px;
-  align-self: center;
-  width: 35%; */
+}
+.textarea {
+  display: inline-grid;
 }
 
 /*=========== FOOTER ===========*/
@@ -384,13 +363,21 @@ footer a {
 
 /*===========MEDIA QUERIES==========*/
 @media (min-width: 400px) {
-  .welcome p,
-  .event-main p,
-  .news-main p {
+  p {
     font-size: 1rem;
+  }
+  h3 {
+    margin: 2%;
   }
 }
 @media (min-width: 600px) {
+  .subheading h2 {
+    width: 580px;
+    margin: auto;
+  }
+  span {
+    font-size: 2.1rem;
+  }
   .welcome2 {
     display: flex;
     justify-content: space-between;
@@ -400,16 +387,25 @@ footer a {
   }
   .event-main img,
   .news-main img,
-  .location img {
+  .location img,
+  .student img {
     width: 60%;
   }
-  .about-main {
+  .about-main,
+  .involved,
+  .explore-spaces {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1%;
   }
+
   .location {
     grid-column: 1/3;
     justify-self: center;
+  }
+
+  .involved div {
+    background-color: var(--peach);
   }
 }
 
@@ -428,8 +424,21 @@ footer a {
   .welcome button {
     align-self: center;
   }
+  .explore-one,
+  .explore-two,
+  .explore-three {
+    flex-direction: row;
+  }
+  .explore-text {
+    align-self: center;
+    width: 35%;
+  }
+
   .event-main section,
-  .news-main section {
+  .news-main section,
+  .student,
+  .contact,
+  .subscribe {
     display: flex;
   }
   .event-text {
@@ -444,8 +453,30 @@ footer a {
   .about-main {
     grid-template-columns: repeat(3, 1fr);
   }
+  .involved p {
+    margin: 0% 10%;
+  }
   .location {
     grid-column: 1/4;
+  }
+
+  .contact-heading h3,
+  .involved h3 {
+    font-size: 2rem;
+  }
+  .contact-input {
+    flex: 46%;
+    margin: 0% 2%;
+  }
+  .textarea {
+    flex: 30%;
+  }
+  .subscribe {
+    justify-content: center;
+    align-items: center;
+  }
+  .subscribe input {
+    margin: 0% 2%;
   }
 }
 @media (min-width: 1090px) {
@@ -455,12 +486,16 @@ footer a {
   .welcome button {
     height: 5rem;
   }
+  .explore-spaces {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .event-main {
     display: flex;
     flex-direction: column;
   }
   .event-main img,
-  .news-main img {
+  .news-main img,
+  .student img {
     margin: 20px;
     width: 450px;
     justify-content: center;
@@ -480,6 +515,13 @@ footer a {
     grid-column: 3/5;
     overflow: hidden;
     justify-self: initial;
+  }
+  .radio {
+    flex: 35%;
+    margin-left: 5%;
+  }
+  .contact-input input {
+    width: 436px;
   }
 }
 
@@ -509,7 +551,6 @@ footer a {
     z-index: 1000;
   }
 }
-
 @media (max-width: 1090px) {
   nav a {
     font-size: 1.1rem;
@@ -524,6 +565,7 @@ footer a {
 
 /*
 -Resize the image on main page
+-search transition
 -Check out all commented sections!
 -Check font-face functionality
 -CSS DRY rewrite
@@ -531,8 +573,12 @@ footer a {
 -icons on about contact info?
 about h2 text-decoration? (Span)
 -location img resize?
+-doublecheck input background colors.
+-embed img box shadows?
 
 For report: 
 Starting on 320px responsive.
 CSS DRY - CTRL + F to find unique styles to embed
+always having search bar open to quickly find codes
+Reduced css lines from approx 700 to 550 lines.
 */
