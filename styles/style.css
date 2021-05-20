@@ -8,17 +8,8 @@ h2,
 h3 {
   font-family: Georgia, Courier New, "Times New Roman", Times, serif;
 }
-/* =========== VARIABLES ===========*/
-:root {
-  --dark: #29637d;
-  --peach: #f4c18e;
-  --green: #baceb3;
-  --light: #fbf8e9;
-  --orange: #fa9a39;
-  --blue: #99e1ff;
-}
 
-/* =========== GLOBAL STYLING ===========*/
+/* ====================== GLOBAL STYLING ======================*/
 * {
   box-sizing: border-box;
 }
@@ -41,11 +32,9 @@ textarea {
 .active a {
   color: var(--dark);
   font-weight: bold;
+  text-decoration: underline;
 }
-.active a:hover {
-  font-size: 1.5rem;
-  color: var(--dark);
-}
+
 h1 {
   font-size: 1.8rem;
   margin: 0px;
@@ -55,17 +44,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
 }
 .fas {
   font-size: 2rem;
 }
-.welcome button:hover,
+.welcome a:hover,
 .explore-text button:hover,
 .explore-spaces button:hover {
   background-color: var(--green);
@@ -75,12 +64,36 @@ h3 {
 .contact button:hover {
   background-color: var(--light);
 }
-/* =========== HEADER AND NAVIGATION ===========*/
+/* ====================== VARIABLES ======================*/
+:root {
+  --dark: #29637d;
+  --peach: #f4c18e;
+  --green: #baceb3;
+  --light: #fbf8e9;
+  --orange: #fa9a39;
+  --blue: #99e1ff;
+}
+
+/* ====================== HEADER, FOOTER & NAVIGATION ======================*/
 header {
   background-color: var(--dark);
   display: flex;
   justify-content: space-between;
 }
+/*=========== FOOTER ===========*/
+footer {
+  background-color: var(--light);
+  font-size: 1.2rem;
+  border-top: 2px solid var(--dark);
+}
+footer p {
+  padding: 5px;
+  margin: 0px;
+}
+footer a {
+  padding: 8px 8px 0px;
+}
+
 nav li {
   display: inline-block;
   color: white;
@@ -88,7 +101,7 @@ nav li {
   font-size: 1.5rem;
 }
 nav a {
-  color: white;
+  color: var(--light);
 }
 nav a:hover,
 footer a:hover {
@@ -128,6 +141,7 @@ header label:hover {
 /* =========== HOME PAGE ===========*/
 .welcome {
   background-color: var(--peach);
+  padding-bottom: 2%;
 }
 .welcome img {
   width: 75%;
@@ -135,20 +149,19 @@ header label:hover {
   margin: 15px 0px;
   box-shadow: 2px 2px 5px black;
 }
-.welcome p,
+
 .event-text {
   margin: 0% 3%;
   padding-bottom: 1%;
 }
-.welcome button {
-  background-color: var(--orange);
-  margin: 10px 0px;
-  height: 5rem;
-}
 .welcome a {
-  font-weight: bold;
-  font-size: 2.1rem;
+  background-color: var(--orange);
   color: var(--dark);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0px;
+  padding: 1%;
+  width: 280px;
 }
 .welcome2 {
   display: grid;
@@ -196,12 +209,12 @@ header label:hover {
 .explore-three button,
 .explore-spaces button {
   background-color: var(--orange);
-  width: 200px;
+  width: 120px;
   height: 5rem;
   box-shadow: 1px 1px 3px black;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 .explore-spaces button {
   justify-self: center;
@@ -210,10 +223,6 @@ header label:hover {
 .explore-spaces img {
   width: 80%;
   box-shadow: 2px 2px 5px black;
-}
-.explore-spaces div,
-.about-main div {
-  background-color: var(--green);
 }
 
 /*=========== Events & News page ===========*/
@@ -225,12 +234,14 @@ p {
 
 .event-one,
 .news-one,
-.student {
+.student,
+.explore-spaces div {
   background-color: var(--green);
 }
 .event-two,
 .news-two,
-.explore-two {
+.explore-two,
+.about-main {
   background-color: var(--peach);
 }
 .event-main img,
@@ -243,24 +254,18 @@ p {
   text-align: center;
 }
 /*=========== About Page ===========*/
-.about-main,
-.explore-spaces {
+
+.explore-spaces,
+.subheading h2,
+.about-main div {
   background-color: var(--light);
 }
 .subheading {
-  background-image: url(../images/textures.png);
+  background-image: url(../images/background-textures.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2%;
 }
-.subheading h2 {
-  background-color: var(--light);
-  padding: 1%;
-}
-span {
-  font-size: 1.3rem;
-}
-
 .location img {
   width: 95%;
 }
@@ -317,12 +322,11 @@ input[type="radio"] {
   height: 2rem;
 }
 .contact-input input:hover,
-.subscribe input:hover,
-.textarea:hover {
+.subscribe input:hover {
   border: 3px solid black;
 }
 textarea,
-.welcome button,
+.welcome a,
 .search:focus,
 .contact-input input,
 .subscribe input {
@@ -339,26 +343,21 @@ textarea,
   width: 275px;
 }
 .subscribe button,
-.contact button,
 .subscribe input {
   justify-self: center;
 }
 .textarea {
   display: inline-grid;
 }
-
-/*=========== FOOTER ===========*/
-footer {
-  background-color: var(--light);
-  font-size: 1.2rem;
-  border-top: 1px solid var(--dark);
+input[type="submit"] {
+  margin: 3%;
+  justify-self: end;
+  width: 40%;
 }
-footer p {
-  padding: 5px;
-  margin: 0px;
-}
-footer a {
-  padding: 8px 8px 0px;
+.subscribe button,
+input[type="submit"] {
+  background-color: var(--orange);
+  height: 40px;
 }
 
 /*===========MEDIA QUERIES==========*/
@@ -366,11 +365,21 @@ footer a {
   p {
     font-size: 1rem;
   }
+
+  h2 {
+    font-size: 1.4rem;
+  }
   h3 {
     margin: 2%;
   }
 }
 @media (min-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
   .subheading h2 {
     width: 580px;
     margin: auto;
@@ -385,10 +394,22 @@ footer a {
   .welcome2 img {
     width: 30%;
   }
+  .explore-one,
+  .explore-two,
+  .explore-three {
+    flex-direction: row;
+  }
+  .explore-text {
+    align-self: center;
+    width: 35%;
+  }
   .event-main img,
   .news-main img,
   .location img,
-  .student img {
+  .student img,
+  .explore-one img,
+  .explore-two img,
+  .explore-three img {
     width: 60%;
   }
   .about-main,
@@ -403,13 +424,18 @@ footer a {
     grid-column: 1/3;
     justify-self: center;
   }
-
   .involved div {
     background-color: var(--peach);
   }
 }
 
 @media (min-width: 800px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
   .welcome {
     display: flex;
     justify-content: space-evenly;
@@ -421,19 +447,15 @@ footer a {
   .welcome-text {
     width: 40%;
   }
-  .welcome button {
+  .welcome a {
     align-self: center;
   }
-  .explore-one,
-  .explore-two,
-  .explore-three {
-    flex-direction: row;
+  .explore-one button,
+  .explore-two button,
+  .explore-three button,
+  .explore-spaces button {
+    width: 200px;
   }
-  .explore-text {
-    align-self: center;
-    width: 35%;
-  }
-
   .event-main section,
   .news-main section,
   .student,
@@ -447,7 +469,8 @@ footer a {
   .event-one,
   .event-two,
   .news-one,
-  .news-two {
+  .news-two,
+  .student {
     justify-content: center;
   }
   .about-main {
@@ -483,8 +506,13 @@ footer a {
   .welcome-text {
     width: 30%;
   }
-  .welcome button {
+  .welcome a {
     height: 5rem;
+  }
+  .explore-one img,
+  .explore-two img,
+  .explore-three img {
+    width: 20%;
   }
   .explore-spaces {
     grid-template-columns: repeat(3, 1fr);
@@ -570,15 +598,9 @@ footer a {
 -Check font-face functionality
 -CSS DRY rewrite
 -Meta doublecheck
--icons on about contact info?
-about h2 text-decoration? (Span)
--location img resize?
--doublecheck input background colors.
--embed img box shadows?
+-detailed work-schedule
+-sections in CSS
 
-For report: 
-Starting on 320px responsive.
-CSS DRY - CTRL + F to find unique styles to embed
-always having search bar open to quickly find codes
-Reduced css lines from approx 700 to 550 lines.
+
+
 */
