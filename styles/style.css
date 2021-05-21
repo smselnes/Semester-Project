@@ -1,5 +1,6 @@
 @font-face {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  src: url();
 }
 a,
 h1,
@@ -119,6 +120,7 @@ nav a:hover,
 footer a:hover {
   color: var(--peach);
 }
+.active a,
 a,
 .search:focus {
   color: var(--dark);
