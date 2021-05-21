@@ -1,15 +1,14 @@
 @font-face {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  src: url();
 }
 a,
 h1,
 h2,
 h3 {
-  font-family: Georgia, Courier New, "Times New Roman", Times, serif;
+  font-family: Georgia, Courier New, Times, serif;
 }
 
-/* ====================== GLOBAL STYLING ======================*/
+/* =========== GLOBAL STYLING ======================*/
 * {
   box-sizing: border-box;
 }
@@ -22,15 +21,8 @@ body {
 a {
   text-decoration: none;
 }
-input,
-textarea {
-  background-color: var(--light);
-}
-.active {
-  background-color: var(--orange);
-}
+
 .active a {
-  color: var(--dark);
   font-weight: bold;
   text-decoration: underline;
 }
@@ -39,7 +31,6 @@ h1 {
   font-size: 1.8rem;
   margin: 0px;
   padding: 10px;
-  background-color: var(--peach);
   text-align: center;
 }
 
@@ -54,17 +45,8 @@ h3 {
 .fas {
   font-size: 2rem;
 }
-.welcome a:hover,
-.explore-text button:hover,
-.explore-spaces button:hover {
-  background-color: var(--green);
-}
-.student button:hover,
-.subscribe button:hover,
-.contact button:hover {
-  background-color: var(--light);
-}
-/* ====================== VARIABLES ======================*/
+
+/* =========== VARIABLES ======================*/
 :root {
   --dark: #29637d;
   --peach: #f4c18e;
@@ -74,15 +56,12 @@ h3 {
   --blue: #99e1ff;
 }
 
-/* ====================== HEADER, FOOTER & NAVIGATION ======================*/
+/* =========== HEADER, FOOTER & NAVIGATION ======================*/
 header {
-  background-color: var(--dark);
   display: flex;
   justify-content: space-between;
 }
-/*=========== FOOTER ===========*/
 footer {
-  background-color: var(--light);
   font-size: 1.2rem;
   border-top: 2px solid var(--dark);
 }
@@ -100,26 +79,18 @@ nav li {
   padding: 13px;
   font-size: 1.5rem;
 }
-nav a {
-  color: var(--light);
-}
-nav a:hover,
-footer a:hover {
-  color: var(--peach);
-}
+
 nav {
   align-self: center;
   margin-right: 10%;
 }
 .search:focus {
   padding: 10px 10px 10px 65px;
-  background-color: var(--light);
-  color: var(--dark);
   transition-duration: 1s;
   transform: rotateX(150deg);
 }
 
-/* =========== Hamburger menu ===========*/
+/* =========== Hamburger menu ======================*/
 #hamburger {
   display: none;
 }
@@ -128,7 +99,6 @@ nav {
 }
 header label {
   display: none;
-  color: var(--light);
   font-size: 3rem;
   margin-right: 10%;
   align-self: center;
@@ -138,11 +108,76 @@ header label:hover {
   transition-duration: 1s;
   transform: rotateZ(360deg);
 }
-/* =========== HOME PAGE ===========*/
-.welcome {
-  background-color: var(--peach);
-  padding-bottom: 2%;
+/* =========== Colors ======================*/
+.contact,
+.contact-heading h3,
+nav a,
+header label {
+  color: var(--light);
 }
+nav a:hover,
+footer a:hover {
+  color: var(--peach);
+}
+.active a,
+.welcome a,
+.search:focus {
+  color: var(--dark);
+}
+/* =========== Background-colors ======================*/
+header,
+.contact-heading h3,
+.contact {
+  background-color: var(--dark);
+}
+.active,
+.welcome a,
+.explore-one button,
+.explore-two button,
+.explore-three button,
+.explore-spaces button,
+.student button,
+.subscribe button,
+.input[type="submit"] {
+  background-color: var(--orange);
+}
+.welcome a:hover,
+.explore-text button:hover,
+.explore-spaces button:hover,
+.event-one,
+.news-one,
+.student,
+.subscribe button:hover,
+.explore-spaces div,
+input[type="submit"]:hover {
+  background-color: var(--green);
+}
+h1,
+.welcome,
+.event-two,
+.news-two,
+.explore-two,
+.about-main,
+.subscribe,
+.involved div {
+  background-color: var(--peach);
+}
+.student button:hover,
+.contact button:hover,
+.explore-spaces,
+.subheading h2,
+.about-main div,
+.explore-intro,
+.welcome2,
+.search:focus,
+.subscribe input,
+input,
+textarea,
+footer {
+  background-color: var(--light);
+}
+
+/*=========== Images ===========*/
 .welcome img {
   width: 75%;
   height: auto;
@@ -150,24 +185,6 @@ header label:hover {
   box-shadow: 2px 2px 5px black;
 }
 
-.event-text {
-  margin: 0% 3%;
-  padding-bottom: 1%;
-}
-.welcome a {
-  background-color: var(--orange);
-  color: var(--dark);
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 10px 0px;
-  padding: 1%;
-  width: 280px;
-}
-.welcome2 {
-  display: grid;
-  background-color: var(--light);
-  justify-items: center;
-}
 .welcome2 img,
 .event-main img,
 .news-main img,
@@ -177,7 +194,80 @@ header label:hover {
   width: 85%;
   border-radius: 40%;
 }
-/*=========== EXPLORE PAGE===========*/
+.explore-one img,
+.explore-two img,
+.explore-three img {
+  margin: 30px;
+  box-shadow: 2px 2px 5px black;
+}
+.explore-spaces img {
+  width: 80%;
+  box-shadow: 2px 2px 5px black;
+}
+.event-main img,
+.news-main img,
+.student img {
+  margin: 10px;
+  width: 85%;
+}
+.location img {
+  width: 95%;
+}
+/*=========== Buttons and links ===========*/
+.welcome a {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0px;
+  padding: 1%;
+  width: 280px;
+  border: 2px solid var(--dark);
+}
+.explore-one button,
+.explore-two button,
+.explore-three button,
+.explore-spaces button {
+  width: 120px;
+  height: 5rem;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.explore-spaces button {
+  justify-self: center;
+  align-self: center;
+}
+.student button {
+  width: 45%;
+  height: 2.5rem;
+  box-shadow: 1px 1px 3px black;
+  margin: 3%;
+}
+input[type="radio"] {
+  transform: scale(1.5);
+}
+input[type="submit"] {
+  margin: 3%;
+  justify-self: end;
+  width: 40%;
+}
+.subscribe button,
+input[type="submit"] {
+  height: 40px;
+}
+/* =========== Content Pages styling ======================*/
+.welcome,
+.location,
+.event-text {
+  padding-bottom: 1%;
+}
+.event-text {
+  margin: 0% 3%;
+}
+.welcome2 {
+  display: grid;
+  justify-items: center;
+}
 .explore-one,
 .explore-three {
   background-color: var(--blue);
@@ -191,113 +281,38 @@ header label:hover {
   flex-direction: column;
   justify-content: center;
 }
-
 .explore-intro {
-  background-color: var(--light);
   margin-top: 2%;
 }
-
-.explore-one img,
-.explore-two img,
-.explore-three img {
-  margin: 30px;
-  box-shadow: 2px 2px 5px black;
-}
-
-.explore-one button,
-.explore-two button,
-.explore-three button,
-.explore-spaces button {
-  background-color: var(--orange);
-  width: 120px;
-  height: 5rem;
-  box-shadow: 1px 1px 3px black;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 5%;
-}
-.explore-spaces button {
-  justify-self: center;
-  align-self: center;
-}
-.explore-spaces img {
-  width: 80%;
-  box-shadow: 2px 2px 5px black;
-}
-
-/*=========== Events & News page ===========*/
-
 .radio,
 p {
   font-size: 0.8rem;
 }
-
-.event-one,
-.news-one,
-.student,
-.explore-spaces div {
-  background-color: var(--green);
-}
-.event-two,
-.news-two,
-.explore-two,
-.about-main {
-  background-color: var(--peach);
-}
-.event-main img,
-.news-main img,
-.student img {
-  margin: 10px;
-  width: 85%;
-}
 .event-text {
   text-align: center;
-}
-/*=========== About Page ===========*/
-
-.explore-spaces,
-.subheading h2,
-.about-main div {
-  background-color: var(--light);
 }
 .subheading {
   background-image: url(../images/background-textures.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 2%;
-}
-.location img {
-  width: 95%;
-}
-
-/*=========== Get Involved page ===========*/
-.student button {
-  background-color: var(--orange);
-  width: 45%;
-  height: 2.5rem;
-  box-shadow: 1px 1px 3px black;
-  margin: 3%;
 }
 .involved div,
 .about-main div,
 .explore-spaces div {
   border: 1px solid black;
-  margin: 1% 1%;
+  margin: 1%;
 }
-p {
+p,
+.contact-heading h3,
+.subheading {
   padding: 2%;
 }
 .contact {
-  background-color: var(--dark);
-  color: var(--light);
   padding: 3%;
 }
 .contact-heading h3 {
   font-size: 1.1rem;
-  color: var(--light);
-  background-color: var(--dark);
   margin: 0px;
-  padding: 2%;
 }
 .radio {
   display: inline-grid;
@@ -308,9 +323,6 @@ p {
 }
 .radio div {
   margin: 10px;
-}
-input[type="radio"] {
-  transform: scale(1.5);
 }
 .contact-input {
   display: grid;
@@ -335,11 +347,9 @@ textarea,
 .subscribe {
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
-  background-color: var(--peach);
   padding-bottom: 2%;
 }
 .subscribe input {
-  background-color: var(--light);
   width: 275px;
 }
 .subscribe button,
@@ -349,18 +359,7 @@ textarea,
 .textarea {
   display: inline-grid;
 }
-input[type="submit"] {
-  margin: 3%;
-  justify-self: end;
-  width: 40%;
-}
-.subscribe button,
-input[type="submit"] {
-  background-color: var(--orange);
-  height: 40px;
-}
-
-/*===========MEDIA QUERIES==========*/
+/*===========MEDIA QUERIES====================*/
 @media (min-width: 400px) {
   p {
     font-size: 1rem;
@@ -417,15 +416,12 @@ input[type="submit"] {
   .explore-spaces {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 1%;
+    padding: 1% 0%;
   }
 
   .location {
     grid-column: 1/3;
     justify-self: center;
-  }
-  .involved div {
-    background-color: var(--peach);
   }
 }
 
@@ -435,9 +431,12 @@ input[type="submit"] {
   }
   h2 {
     font-size: 1.8rem;
+    padding: 2%;
+  }
+  h3 {
+    font-size: 1.3rem;
   }
   .welcome {
-    display: flex;
     justify-content: space-evenly;
   }
   .welcome img {
@@ -460,7 +459,8 @@ input[type="submit"] {
   .news-main section,
   .student,
   .contact,
-  .subscribe {
+  .subscribe,
+  .welcome {
     display: flex;
   }
   .event-text {
@@ -470,7 +470,8 @@ input[type="submit"] {
   .event-two,
   .news-one,
   .news-two,
-  .student {
+  .student,
+  .subscribe {
     justify-content: center;
   }
   .about-main {
@@ -489,16 +490,15 @@ input[type="submit"] {
   }
   .contact-input {
     flex: 46%;
-    margin: 0% 2%;
   }
   .textarea {
     flex: 30%;
   }
   .subscribe {
-    justify-content: center;
     align-items: center;
   }
-  .subscribe input {
+  .subscribe input,
+  .contact-input {
     margin: 0% 2%;
   }
 }
@@ -512,7 +512,7 @@ input[type="submit"] {
   .explore-one img,
   .explore-two img,
   .explore-three img {
-    width: 20%;
+    width: 40%;
   }
   .explore-spaces {
     grid-template-columns: repeat(3, 1fr);
@@ -590,17 +590,3 @@ input[type="submit"] {
     margin-right: 0%;
   }
 }
-
-/*
--Resize the image on main page
--search transition
--Check out all commented sections!
--Check font-face functionality
--CSS DRY rewrite
--Meta doublecheck
--detailed work-schedule
--sections in CSS
-
-
-
-*/
