@@ -21,6 +21,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 
 .active a {
@@ -107,7 +108,7 @@ header label {
 }
 header label:hover {
   transition-duration: 1s;
-  transform: rotateZ(360deg);
+  transform: rotate(360deg);
 }
 /* =========== Colors ======================*/
 .contact,
@@ -121,7 +122,6 @@ footer a:hover {
   color: var(--peach);
 }
 .active a,
-a,
 .search:focus {
   color: var(--dark);
 }
@@ -223,26 +223,16 @@ footer {
   width: 280px;
   border: 2px solid var(--dark);
 }
-.explore-one button,
-.explore-two button,
-.explore-three button,
-.explore-spaces button {
-  width: 120px;
-  height: 5rem;
-  box-shadow: 1px 1px 3px black;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 5%;
-}
-.explore-spaces button {
+
+.explore-spaces a {
   justify-self: center;
   align-self: center;
 }
 .student button {
-  width: 45%;
+  width: 40%;
   height: 2.5rem;
-  box-shadow: 1px 1px 3px black;
   margin: 3%;
+  font-size: 1rem;
 }
 input[type="radio"] {
   transform: scale(1.5);
@@ -269,6 +259,18 @@ input[type="submit"] {
   display: grid;
   justify-items: center;
 }
+
+.explore-main-section a {
+  border-radius: 1em;
+  padding: 1%;
+  width: 120px;
+  height: 5rem;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
 .explore-one,
 .explore-three {
   background-color: var(--blue);
