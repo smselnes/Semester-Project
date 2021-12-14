@@ -1,24 +1,15 @@
-@font-face {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  src: url();
-}
-a,
-h1,
-h2,
-h3 {
-  font-family: Georgia, Courier New, Times, serif;
-}
-
 /* =========== GLOBAL STYLING ======================*/
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
   text-align: center;
   font-size: 62.5%;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -27,6 +18,21 @@ a {
 .active a {
   font-weight: bold;
   text-decoration: underline;
+}
+
+
+/* =========== TYPOGRAPHY ======================*/
+
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  src: url();
+}
+
+a,
+h1,
+h2,
+h3 {
+  font-family: Georgia, Courier New, Times, serif;
 }
 
 h1 {
@@ -40,15 +46,18 @@ h2 {
   font-size: 1.2rem;
   margin: 0;
 }
+
 h3 {
   font-size: 1rem;
   margin: 0;
 }
+
 .fas {
   font-size: 2rem;
 }
 
 /* =========== VARIABLES ======================*/
+
 :root {
   --dark: #29637d;
   --peach: #f4c18e;
@@ -59,14 +68,17 @@ h3 {
 }
 
 /* =========== HEADER, FOOTER & NAVIGATION ======================*/
+
 header {
   display: flex;
   justify-content: space-between;
 }
+
 footer {
   font-size: 1.2rem;
   border-top: 2px solid var(--dark);
 }
+
 footer p {
   padding: 5px;
   margin: 0px;
@@ -86,6 +98,7 @@ nav {
   align-self: center;
   margin-right: 10%;
 }
+
 .search:focus {
   padding: 10px 10px 10px 65px;
   transition-duration: 1s;
@@ -96,9 +109,11 @@ nav {
 #hamburger {
   display: none;
 }
+
 #hamburger:checked ~ nav {
   display: contents;
 }
+
 header label {
   display: none;
   font-size: 3rem;
@@ -106,10 +121,12 @@ header label {
   align-self: center;
   cursor: pointer;
 }
+
 header label:hover {
   transition-duration: 1s;
   transform: rotate(360deg);
 }
+
 /* =========== Colors ======================*/
 .contact,
 .contact-heading h3,
@@ -117,20 +134,25 @@ nav a,
 header label {
   color: var(--light);
 }
+
 nav a:hover,
 footer a:hover {
   color: var(--peach);
 }
+
 .active a,
 .search:focus {
   color: var(--dark);
 }
+
 /* =========== Background-colors ======================*/
+
 header,
 .contact-heading h3,
 .contact {
   background-color: var(--dark);
 }
+
 .active,
 .welcome a,
 .explore-main-section a,
@@ -195,56 +217,68 @@ footer {
   width: 85%;
   border-radius: 40%;
 }
+
 .explore-one img,
 .explore-two img,
 .explore-three img {
   margin: 30px;
   box-shadow: 2px 2px 1px black;
 }
+
 .explore-spaces img {
   width: 80%;
   box-shadow: 2px 2px 1px black;
 }
+
 .event-main img,
 .news-main img,
 .student img {
   margin: 10px;
   width: 85%;
 }
+
 .location img {
   width: 95%;
 }
+
 /*=========== Buttons and links ===========*/
 
 .student button {
-  width: 40%;
-  height: 2.5rem;
+  width: 30%;
+  border-radius: 40%;
+  padding: 1%;
   margin: 3%;
   font-size: 1rem;
 }
+
 input[type="radio"] {
   transform: scale(1.5);
 }
+
 input[type="submit"] {
   margin: 3%;
   justify-self: end;
   width: 40%;
 }
+
 .subscribe button,
 input[type="submit"] {
   height: 40px;
   border-radius: 40%;
   cursor: pointer;
 }
+
 /* =========== Content Pages styling ======================*/
 .welcome,
 .location,
 .event-text {
   padding-bottom: 5%;
 }
+
 .event-text {
   margin: 0% 3%;
 }
+
 .welcome2 {
   display: grid;
   justify-items: center;
@@ -268,6 +302,7 @@ input[type="submit"] {
   justify-content: center;
   padding-bottom: 6%;
 }
+
 .explore-two {
   display: flex;
   flex-direction: column;
@@ -304,9 +339,11 @@ p {
   border: 1px solid black;
   margin: 1%;
 }
+
 .explore-spaces div {
   margin-bottom: 5%;
 }
+
 p,
 .contact-heading h3,
 .subheading {
@@ -336,39 +373,48 @@ form span {
   display: inline-grid;
   text-align: start;
 }
+
 .radio-choice:hover {
   border: 1px solid var(--light);
 }
+
 .radio div {
   margin: 10px;
 }
+
 .contact-input {
   display: grid;
   margin: 2%;
 }
+
 .contact-input input,
 .subscribe input {
   margin: 5px 0px;
   height: 2rem;
 }
+
 .contact-input input:hover,
 .subscribe input:hover {
   border: 3px solid black;
 }
+
 textarea,
 .search:focus,
 .contact-input input,
 .subscribe input {
   border-radius: 10px;
 }
+
 .subscribe {
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
   padding-bottom: 2%;
 }
+
 .subscribe input {
   width: 275px;
 }
+
 .subscribe button,
 .subscribe input {
   justify-self: center;
@@ -382,6 +428,7 @@ textarea,
 .textarea {
   display: inline-grid;
 }
+
 /*===========MEDIA QUERIES====================*/
 @media (min-width: 400px) {
   p {
@@ -391,21 +438,26 @@ textarea,
   h2 {
     font-size: 1.4rem;
   }
+
   h3 {
     margin: 2%;
   }
 }
+
 @media (min-width: 600px) {
   h1 {
     font-size: 2rem;
   }
+
   h2 {
     font-size: 1.6rem;
   }
+
   .subheading h2 {
     width: 580px;
     margin: auto;
   }
+
   span {
     font-size: 2.1rem;
   }
@@ -418,18 +470,22 @@ textarea,
     max-width: fit-content;
     margin: 1% auto;
   }
+
   .welcome2 {
     display: flex;
     justify-content: space-between;
   }
+
   .welcome2 img {
     width: 30%;
   }
+
   .explore-one,
   .explore-two,
   .explore-three {
     flex-direction: row;
   }
+
   .explore-text {
     align-self: center;
     width: 35%;
@@ -451,6 +507,7 @@ textarea,
   .explore-three img {
     width: 60%;
   }
+
   .about-main,
   .involved,
   .explore-spaces {
@@ -469,13 +526,16 @@ textarea,
   h1 {
     font-size: 2.5rem;
   }
+
   h2 {
     font-size: 1.8rem;
     padding: 2%;
   }
+
   h3 {
     font-size: 1.3rem;
   }
+
   .welcome {
     justify-content: space-evenly;
   }
@@ -488,9 +548,11 @@ textarea,
     width: 35%;
     margin: 15px 10px;
   }
+
   .welcome-text {
     width: 40%;
   }
+
   .welcome a {
     align-self: center;
   }
@@ -503,9 +565,11 @@ textarea,
   .welcome {
     display: flex;
   }
+
   .event-text {
     text-align: left;
   }
+
   .event-one,
   .event-two,
   .news-one,
@@ -514,12 +578,15 @@ textarea,
   .subscribe {
     justify-content: center;
   }
+
   .about-main {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .involved p {
     margin: 0% 10%;
   }
+
   .location {
     grid-column: 1/4;
   }
@@ -528,12 +595,15 @@ textarea,
   .involved h3 {
     font-size: 2rem;
   }
+
   .contact-input {
     flex: 46%;
   }
+
   .textarea {
     flex: 30%;
   }
+
   .subscribe {
     align-items: center;
   }
@@ -549,6 +619,7 @@ textarea,
     margin: 0% 2%;
   }
 }
+
 @media (min-width: 1090px) {
   .welcome-text {
     width: 30%;
@@ -559,13 +630,16 @@ textarea,
   .explore-three img {
     width: 40%;
   }
+
   .explore-spaces {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .event-main {
     display: flex;
     flex-direction: column;
   }
+
   .event-main img,
   .news-main img,
   .student img {
@@ -578,21 +652,26 @@ textarea,
     width: 38%;
     text-align: left;
   }
+
   .about-main {
     grid-template-columns: repeat(4, 1fr);
   }
+
   .about-main div {
     height: 380px;
   }
+
   .location {
     grid-column: 3/5;
     overflow: hidden;
     justify-self: initial;
   }
+
   .radio {
     flex: 35%;
     margin-left: 5%;
   }
+
   .contact-input input {
     width: 436px;
   }
@@ -602,20 +681,25 @@ textarea,
   nav {
     display: none;
   }
+
   header label {
     display: block;
   }
+
   #hamburger {
     display: none;
   }
+
   header a {
     color: var(--light);
   }
+
   nav li {
     display: block;
     background-color: var(--dark);
     padding: 20px;
   }
+
   nav ul {
     position: absolute;
     margin-top: 182px;
@@ -624,13 +708,16 @@ textarea,
     z-index: 1000;
   }
 }
+
 @media (max-width: 1090px) {
   nav a {
     font-size: 1.1rem;
   }
+
   nav ul {
     padding: 0px;
   }
+
   nav {
     margin-right: 0%;
   }

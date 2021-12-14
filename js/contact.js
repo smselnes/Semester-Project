@@ -84,13 +84,3 @@ function validateSubscription() {
 }
 
 sub.addEventListener("click", validateSubscription);
-
-
-
-
-/* sub.onclick = function subscribe() {
-    subSuccess.style.display = "block";
-    sub.style.display = "none";
-    subSection.style.display = "none";
-    console.log("success");
-} */
