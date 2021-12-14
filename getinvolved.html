@@ -17,11 +17,12 @@
   </head>
   <body>
     <header>
-      <a href="index.html"
-        ><img
+      <a href="index.html">
+        <img
           src="/images/logo.jpg"
           alt="Brand logo. Illustration of a uppercase letter c sorrounded by atoms."
-      /></a>
+        />
+      </a>
       <label for="hamburger"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger" />
       <nav>
@@ -126,9 +127,9 @@
         </div>
       </section>
       <section class="contact-heading">
-        <h3>Want to book a guided tour or get in touch with us?</h3>
         <h3 id="contact-ref">
-          Use this form and we will contact you as soon as possible.
+          Want to book a guided tour or get in touch with us? Use this form and
+          we will contact you as soon as possible.
         </h3>
       </section>
       <form method="GET" class="contact">
@@ -155,27 +156,17 @@
           </div>
         </div>
         <div class="contact-input">
+          <input type="name" name="name" id="name" placeholder="Full name" />
+          <span id="name-error">*Name must contain atleast 3 characters</span>
           <input
-            type="name"
-            name="name"
-            id="name"
-            placeholder="Full name"
-            required
-          />
-          <input
-            type="email"
+            type="text"
             name="email"
             id="email"
             placeholder="E-mail address"
-            required
           />
-          <input
-            type="tel"
-            name="tel"
-            id="tel"
-            placeholder="Phone number"
-            required
-          />
+          <span id="mail-error">*Not a valid email format</span>
+          <input type="tel" name="tel" id="tel" placeholder="Phone number" />
+          <span id="phone-error">*Please enter minimum 8 digits</span>
         </div>
         <div class="textarea">
           <textarea
@@ -185,9 +176,13 @@
             rows="10"
             placeholder="Write your message here..."
           ></textarea>
+          <span id="form-error">
+            *Message must contain atleast 25 characters.
+          </span>
           <input type="submit" name="submit" id="request" />
         </div>
       </form>
+      <span id="form-success"></span>
       <div class="subscribe">
         <h3>Subscribe to our newsletter?</h3>
         <input
@@ -197,7 +192,8 @@
           placeholder="Enter your e-mail address here"
         />
 
-        <button><a href="#">Subscribe!</a></button>
+        <button id="subscribe-button">Subscribe!</button>
+        <span id="subscribe-success"></span>
       </div>
     </main>
     <footer>
@@ -205,5 +201,7 @@
       <a href="#">Terms</a>
       <a href="#">Privacy</a>
     </footer>
+
+    <script src="/js/contact.js"></script>
   </body>
 </html>

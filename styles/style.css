@@ -133,26 +133,23 @@ header,
 }
 .active,
 .welcome a,
-.explore-one button,
-.explore-two button,
-.explore-three button,
-.explore-spaces button,
+.explore-main-section a,
+#event-button,
 .student button,
 .subscribe button,
-.input[type="submit"] {
+input[type="submit"] {
   background-color: var(--orange);
 }
+
 .welcome a:hover,
-.explore-text button:hover,
-.explore-spaces button:hover,
 .event-one,
 .news-one,
 .student,
 .subscribe button:hover,
-.explore-spaces div,
-input[type="submit"]:hover {
+.explore-spaces div {
   background-color: var(--green);
 }
+
 h1,
 .welcome,
 .event-two,
@@ -163,16 +160,19 @@ h1,
 .involved div {
   background-color: var(--peach);
 }
+
 .student button:hover,
 .contact button:hover,
+.explore-main-section a:hover,
+#event-button:hover,
 .explore-spaces,
 .subheading h2,
 .about-main div,
 .explore-intro,
 .welcome2,
 .search:focus,
-.subscribe input,
-input,
+form input,
+input[type="submit"]:hover,
 textarea,
 footer {
   background-color: var(--light);
@@ -183,14 +183,14 @@ footer {
   width: 75%;
   height: auto;
   margin: 15px 0px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 1px black;
 }
 
 .welcome2 img,
 .event-main img,
 .news-main img,
 .student img {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 1px black;
   margin: 3% 2%;
   width: 85%;
   border-radius: 40%;
@@ -199,11 +199,11 @@ footer {
 .explore-two img,
 .explore-three img {
   margin: 30px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 1px black;
 }
 .explore-spaces img {
   width: 80%;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 1px black;
 }
 .event-main img,
 .news-main img,
@@ -215,19 +215,7 @@ footer {
   width: 95%;
 }
 /*=========== Buttons and links ===========*/
-.welcome a {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 10px 0px;
-  padding: 1%;
-  width: 280px;
-  border: 2px solid var(--dark);
-}
 
-.explore-spaces a {
-  justify-self: center;
-  align-self: center;
-}
 .student button {
   width: 40%;
   height: 2.5rem;
@@ -245,12 +233,14 @@ input[type="submit"] {
 .subscribe button,
 input[type="submit"] {
   height: 40px;
+  border-radius: 40%;
+  cursor: pointer;
 }
 /* =========== Content Pages styling ======================*/
 .welcome,
 .location,
 .event-text {
-  padding-bottom: 1%;
+  padding-bottom: 5%;
 }
 .event-text {
   margin: 0% 3%;
@@ -260,15 +250,13 @@ input[type="submit"] {
   justify-items: center;
 }
 
-.explore-main-section a {
-  border-radius: 1em;
-  padding: 1%;
-  width: 120px;
-  height: 5rem;
+.explore-main-section a,
+.welcome a {
+  border-radius: 40%;
+  padding: 4%;
   box-shadow: 1px 1px 3px black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 5%;
 }
 
 .explore-one,
@@ -278,45 +266,72 @@ input[type="submit"] {
   flex-direction: column-reverse;
   text-align: center;
   justify-content: center;
+  padding-bottom: 6%;
 }
 .explore-two {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 6%;
 }
+
 .explore-intro {
-  margin-top: 2%;
+  padding-top: 15px;
 }
+
+.explore-spaces {
+  padding-bottom: 5%;
+}
+
 .radio,
 p {
   font-size: 0.8rem;
 }
+
 .event-text {
   text-align: center;
 }
+
 .subheading {
   background-image: url(../images/background-textures.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .involved div,
 .about-main div,
 .explore-spaces div {
   border: 1px solid black;
   margin: 1%;
 }
+.explore-spaces div {
+  margin-bottom: 5%;
+}
 p,
 .contact-heading h3,
 .subheading {
   padding: 2%;
 }
+
 .contact {
   padding: 3%;
 }
+
 .contact-heading h3 {
   font-size: 1.1rem;
   margin: 0px;
 }
+
+form span {
+  display: none;
+}
+
+#form-success {
+  display: none;
+  border: 1px solid red;
+  margin: 2px;
+}
+
 .radio {
   display: inline-grid;
   text-align: start;
@@ -341,7 +356,6 @@ p,
   border: 3px solid black;
 }
 textarea,
-.welcome a,
 .search:focus,
 .contact-input input,
 .subscribe input {
@@ -359,6 +373,12 @@ textarea,
 .subscribe input {
   justify-self: center;
 }
+
+#subscribe-success {
+  display: none;
+  font-size: 1rem;
+}
+
 .textarea {
   display: inline-grid;
 }
@@ -389,6 +409,15 @@ textarea,
   span {
     font-size: 2.1rem;
   }
+
+  form span {
+    font-size: 1rem;
+  }
+
+  #form-success {
+    max-width: fit-content;
+    margin: 1% auto;
+  }
   .welcome2 {
     display: flex;
     justify-content: space-between;
@@ -405,6 +434,14 @@ textarea,
     align-self: center;
     width: 35%;
   }
+
+  #event-button {
+    height: 60px;
+    max-width: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+
   .event-main img,
   .news-main img,
   .location img,
@@ -442,6 +479,11 @@ textarea,
   .welcome {
     justify-content: space-evenly;
   }
+
+  .welcome a {
+    padding: 3%;
+  }
+
   .welcome img {
     width: 35%;
     margin: 15px 10px;
@@ -452,12 +494,7 @@ textarea,
   .welcome a {
     align-self: center;
   }
-  .explore-one button,
-  .explore-two button,
-  .explore-three button,
-  .explore-spaces button {
-    width: 200px;
-  }
+
   .event-main section,
   .news-main section,
   .student,
@@ -500,6 +537,13 @@ textarea,
   .subscribe {
     align-items: center;
   }
+
+  #subscribe-success {
+    position: absolute;
+    justify-self: center;
+    margin-top: 7%;
+  }
+
   .subscribe input,
   .contact-input {
     margin: 0% 2%;
@@ -509,9 +553,7 @@ textarea,
   .welcome-text {
     width: 30%;
   }
-  .welcome a {
-    height: 5rem;
-  }
+
   .explore-one img,
   .explore-two img,
   .explore-three img {
